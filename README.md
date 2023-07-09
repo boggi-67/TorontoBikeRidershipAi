@@ -1,4 +1,5 @@
-# TorontoBikeRidershipAi
+# EIN BEISPIELLOSER DURCHBRUCH: KÜNSTLICHE INTELLIGENZ IN DER BIKESHARING-PROGNOSE
+
 Dieses Projekt ist das Ergebnis der Bosch-Coding Challenge, die ein Meisterwerk an technologischer Innovation darstellt. Wir präsentieren eine bahnbrechende Künstliche Intelligenz, die in der Lage ist, auf Grundlage von Wetterdaten und historischen Bikesharing-Daten zukunftsweisende Prognosen zu erstellen. Sie kann exakt vorhersagen, wie viele Personen in einer bestimmten Stunde in der Zukunft das revolutionäre Angebot des Bikesharings nutzen werden.
 
 Trotz eines knappen Zeitfensters haben wir es geschafft, die KI auf den Daten von Juni bis August zu trainieren. Und während dies bereits beeindruckende Ergebnisse hervorbringt, können wir nur erahnen, welche beispiellose Genauigkeit erreicht werden könnte, wenn wir die KI mit Daten aus mehreren Jahren füttern. Diese erweiterte Lernphase würde es der KI ermöglichen, spezielle Muster wie Feiertage (z.B. Weihnachten) zu erkennen, die eine einzigartige Dynamik im Vergleich zu herkömmlichen Tagen aufweisen.
