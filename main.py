@@ -7,6 +7,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 
+import matplotlib.pyplot as plt
+import math
+
 # CSV-Datei laden
 bike_data = pd.read_csv('bikes.csv').dropna()
 bike_data['Start Time'] = pd.to_datetime(bike_data['Start Time'])
@@ -51,11 +54,12 @@ subset = merged_df[columns_to_scale]
 scaler = MinMaxScaler()
 weather_features = scaler.fit_transform(subset)
 
+merged_df = pd.get_dummies(merged_df, columns=['weekday', 'month'])
+
 merged_df[columns_to_scale] = weather_features
 merged_df = merged_df.dropna()
-print(weather_features)
+print(merged_df.columns)
 
-import math
 # Teilen Sie die Daten in Trainings- und Testdaten auf
 X_train, X_test, y_train, y_test = train_test_split(
     merged_df.drop(['Bike Count'], axis=1), 
@@ -65,15 +69,11 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 # Modelltraining
-model = RandomForestRegressor(n_estimators=100, random_state=42)
+model = RandomForestRegressor(n_estimators=200, random_state=42, bootstrap=True, max_depth = 20, min_samples_leaf=1, min_samples_split=2)
 model.fit(X_train, y_train)
 
 # Modelltest
 predictions = model.predict(X_test)
-
-
-
-import matplotlib.pyplot as plt
 
 # Plotting the true values and predicted values along with the errors
 plt.figure(figsize=(14, 6))
